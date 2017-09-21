@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+  <head>
+  <title>Zombie Attack</title>
+    <!-- Bootstrap Ready -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- reset -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- Javascript Animation Library -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <!-- Game Timer -->
+    </head>
+
+
+
+
+<header>
+<div class="row">
+<div class="col-lg12">
+    
+      <nav class="navbar navbar-light bg-faded">
+          <a class="navbar-brand" href="#">
+            <img src="assets/images/header_Image.png" height="50" alt="">
+          </a>
+                <div class="nav navbar navbar-left">
+
+               <h1 id="game-timer">Time to shoot: <span id="count">30</span> seconds...</h1>
+
+                       </div>
+
+
+                    <div class="nav navbar navbar-right mediabuttons">
+                        <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+                        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook"/>
+                        </a>
+
+                        <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+                        <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+                        </a>
+
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+                        <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                        </a>
+
+                        <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                        </a>
+                    </div>
+    </nav>
+</div>
+</div>
+</header>
+  
+
+<body>
+
+    <div id="clouds">
+    <div class="cloud x1"></div>
+    <!-- Time for multiple clouds to dance around -->
+    <div class="cloud x2"></div>
+    <div class="cloud x3"></div>
+    <div class="cloud x4"></div>
+    <div class="cloud x5"></div>
+
+    </div>
+
+
+    
+
+
+    <div class="container">
+    <!-- Player Enter Your Name Section -->
+<!-- End Player Name Section  -->
+
+
+  
+
+
+
+    <!-- Zombie Field -->
+    <div id="range">
+             <div id="score"></div>
+             <div id="stats"></div>
+             <img alt="FIRE!" id="img1" src="https://vignette1.wikia.nocookie.net/plantsvszombies/images/1/14/JetpackZombieHD.png/revision/latest?cb=20140521234908" width=13%;/>
+<!-- Game Data Section -->
+        <div class="panel panel-default">
+            <div class="row" id="stats"> <!-- Game Data Row -->
+                <div class="col-lg-11 col-md-11 col-sm-11"></div>
+
+                <!-- Player 1 Left Side -->
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <div class="panel panel-default playerPanel" id="playerPanel1">
+                        <div class="panel-heading panelName">
+                            <div class="option">Player 1 Score:</div>
+                        </div>
+
+                        <div class="panel-body panelOption text-center">
+                            <h3 class="panel-title text-center" id="playerOneName"></h3>
+
+                        </div>
+
+                        <div class="panel-body panelStats text-center">
+                            <div class="stats" id="player1Stats"></div>
+                        </div>
+                    </div>
+                </div> <!-- End Player 1-->
+            </div>
+
+
+
+
+             <div class="row" id="stats"> 
+
+                <div class="col-lg-11 col-md-11 col-sm-11"></div>
+                <!-- Player 2 Right Side -->
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <div class="panel panel-default playerPanel" id="playerPanel2">
+                        <div class="panel-heading panelName">
+                            <div class="option">Player 2 Score:</div>                            
+                        </div>
+
+                        <div class="panel-body panelOption text-center">
+                            <h3 class="panel-title text-center" id="playerTwoName"></h3>
+                        </div>
+
+                        <div class="panel-body panelStats text-center">
+                            <div class="stats" id="player2Stats"></div>
+                        </div>
+                    </div>
+                </div> <!-- End Player 2 Right Side -->
+                
+             </div> <!-- Game Data Row -->
+        </div> --> <!-- End Game Data Section  -->
+</div>
+         
+    </div>
+
+
+    <img id ="zombie" src="http://johndopp.com/wp-content/uploads/plantsvszombies_png.png" class="animated bounce" width=6%>
+    <img id="cow1" src="https://i.imgur.com/V4otTTg.png" class="animated wobble" width=10%/>
+    <img id="cow2" src="https://i.imgur.com/Tx3Ve6s.png" class="animated fadeInLeft" width=10%/>
+    <!-- <img id="cow3" src="https://i.imgur.com/DxqSOfR.png" class="animated wobble" width=8%/> -->
+
+        <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="nav navbar text-center col-lg-3"> 
+            <form id="name-form">
+                <input type="text" id="name-input" placeholder="Your Name">
+                <input id="add-name" type="submit" value="Submit">
+            </form>
+        </div> 
+        </div>
+        </div>
+
+
+                   
+        
+ <!-- Chat Section -->
+        <div class="row">
+
+            <div class="col-lg-5 col-md-5 col-sm-5">
+                <div id="chatDisplay"></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2">
+               
+               <div class="panel panel-default" id="vidPanel">
+
+                        <div id="newPanel"> 
+
+                             <form id="yt-form" onsubmit="go_get(); return false;" >
+
+                                   <input type="text"  id="yourtextfield"/>
+                              
+                                   <input type="submit" value="Search Youtube" id="submit-btn"/>
+                              
+                              </form>
+
+                            <iframe id="youriframe" width="165" height="95" ></iframe>
+ 
+                        </div>
+            </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4"> 
+                <div class="chatInput">
+                    <div class="chatLabel">Type Your Message!</div>
+
+                    <div class="chatPanel"> 
+                        <form id="chat-form">
+                            <textarea type="text" id="chat-input"></textarea>
+                            <input id="chat-send" type="submit" value="Send">
+                           </form>
+                       </div>
+                    </div>
+               </div> <!-- End Player Name Section  -->
+            </div>
+       </div>  <!-- End Chat Section  -->
+
+
+
+    <!--Social Media Buttons-->
+
+
+
+
+
+
+
+
+
+       <!-- Game Timer JS -->
+         <script type="text/javascript">
+
+              window.onload = function(){
+
+              (function(){
+                var counter = 30;
+
+                setInterval(function() {
+                  counter--;
+                  if (counter >= 0) {
+                    span = document.getElementById("count");
+                    span.innerHTML = counter;
+                  }
+                  // Display 'counter' wherever you want to display it.
+                  if (counter === 0) {
+                    //  alert('Game Over!');
+                      clearInterval(counter);
+                  }
+
+                }, 1000);
+
+              })();
+
+              }
+
+            </script>
+      
+
+
+<script type="text/javascript">
+                             function go_get(){
+                               var base_url = 'http://www.youtube.com/embed?listType=search&list=';
+                               var search_field = document.getElementById('yourtextfield').value;
+                               var target_url = base_url + search_field;
+                               var ifr = document.getElementById('youriframe');
+                               ifr.src = target_url;
+                               return false;
+                              }
+</script>
+
+
+
+
+<!-- JS File -->
+<script src="app.js"></script>
+<script src="api.js"></script>
+<script>setTimeout(function(){window.location.href='Gameover.html'},30000);</script>
+
+</body>
+</html>

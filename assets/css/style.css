@@ -1,0 +1,372 @@
+body{
+	background-image: url("../images/kSQdCxM.jpg");
+    background-position: cover;
+    background-size: 100% 100%;
+	
+	}
+
+header {
+    display: inline;
+    padding-top: 20px;
+}
+
+a {
+    margin-right: 10px;
+}
+
+#yourtextfield{
+    margin-top: 350px;
+    margin-left: 10px;
+}
+
+#name-form{
+    display: inline;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#name-input {
+    border: transparent solid 1px;
+    border-radius: 5px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+#range{
+     position: absolute;
+     top:0;left: 0;
+     cursor: crosshair;
+     width: 100%;
+     height: 300px;
+     }
+            
+#img1{
+     position: absolute;
+     top:100px; left:0;
+     border: none;
+     padding: 10px;
+      }
+            
+ #score{
+     font: 16px normal arial, verdana, sans-serif;
+     color: #3f3f3f;
+     font-weight: bold;
+     margin-top: 80px;
+     padding: 50px;
+     z-index: 100;
+            }
+
+#cow1, #cow2, #zombie {z-index:500;}
+
+#cow1 {
+    position:absolute; 
+    bottom:50px; 
+    left:;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+#cow2 {
+    position:absolute; 
+    bottom:50px; left:900px;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+#zombie{
+    position: absolute;
+    bottom:50px;
+    left: 350px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.panel {
+    background: transparent;
+    border: none;
+    border-radius: 5px 5px 0px 0px;
+    margin-right: 5px;
+
+}
+
+#container{
+    margin-left: 200px;
+}
+
+#query{
+    margin-left: 200px;
+}
+
+.panel-body {
+    padding: 5px;
+}
+
+.playerPanel .panelName {
+    min-height: 25px;
+    background-color: #fafafa;
+    text-align: center;
+    font-weight: bold;
+    margin-left: auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+h3 .playerPanel .panelName  {
+    font-size: 12px;
+    color: #f3f3f3;
+    margin: 0.25em 0em 0em 0em;
+}
+
+.playerPanel .panelOption {
+    min-height: 15px;
+    background-color: black;
+    font-weight: normal;
+    font-size: -1.5em;
+    color: #fafafa;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+.playerPanel .panelStats{
+    background-color: #fafafa;
+    color: #3f3f3f;
+    font-weight: normal;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 0px 0px 5px 5px;
+
+}
+
+
+h1#game-timer {
+    color: #fafafa;
+}
+
+
+
+#chatDisplay {
+    height: 150px;
+    width: 100%;
+    overflow: auto;
+    text-align: left;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1em;
+    color: black;
+    padding: 1em 1em 1em 1em;
+}
+
+.chatInput {
+    height: 150px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.chatLabel {
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em 0em 0.5em 0em;
+}
+
+#chat-input {
+    width: 60%;
+    height: 90px;
+    margin-left: 15px;
+    margin-right: 5px;
+    color: #b4c7df;
+    border-radius: 10px;
+    background-color: #D3D3D3;
+}
+
+#chat-input:focus {
+    color: black;
+    background-color: white;
+}
+
+#chat-send {
+    width: 20%;
+    height: 90px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: white;
+    font-weight: normal;
+    position: relative;
+    top: -40px;
+    background-color: black
+
+}
+
+
+
+/*Cloud Animations*/
+.cloud {
+    width: 200px; height: 60px;
+    background: #fff;
+    
+    border-radius: 200px;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    
+    position: relative; 
+}
+
+.cloud:before, .cloud:after {
+    content: '';
+    position: absolute; 
+    background: #fff;
+    width: 100px; height: 80px;
+    position: absolute; top: -15px; left: 10px;
+    
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+    width: 120px; height: 120px;
+    top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+    -webkit-animation: moveclouds 15s linear infinite;
+    -moz-animation: moveclouds 15s linear infinite;
+    -o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+    left: 200px;
+    
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.6; /*opacity proportional to the size*/
+    
+    /*Speed will also be proportional to the size and opacity*/
+    /*More the speed. Less the time in 's' = seconds*/
+    -webkit-animation: moveclouds 25s linear infinite;
+    -moz-animation: moveclouds 25s linear infinite;
+    -o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+    left: -250px; top: -200px;
+    
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8; /*opacity proportional to the size*/
+    
+    -webkit-animation: moveclouds 20s linear infinite;
+    -moz-animation: moveclouds 20s linear infinite;
+    -o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+    left: 470px; top: -250px;
+    
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+    opacity: 0.75; /*opacity proportional to the size*/
+    
+    -webkit-animation: moveclouds 18s linear infinite;
+    -moz-animation: moveclouds 18s linear infinite;
+    -o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+    left: -150px; top: -150px;
+    
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8; /*opacity proportional to the size*/
+    
+    -webkit-animation: moveclouds 20s linear infinite;
+    -moz-animation: moveclouds 20s linear infinite;
+    -o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+    0% {margin-left: 1000px;}
+    100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+    0% {margin-left: 1000px;}
+    100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+    0% {margin-left: 1000px;}
+    100% {margin-left: -1000px;}
+}
+
+/*End Cloud Animations*/
+
+
+/*Media Buttons Styling*/
+.mediabuttons {
+    text-align: left;
+    display: inline;
+}
+
+a.mediabuttons {
+    display: inline;
+    margin-right: 10px;
+}
+/*End Media Buttons Styling*/
+
+#waitingNotice {
+    background: black;
+}
+
+#newPanel {
+    max-height: 255px;
+    padding-top: 5px;
+    background: #f3f3f3;
+}
+
+iframe {
+    border: transparent; solid 1px;
+    margin-top: 5px;
+}
+
+input#yourtextfield {
+    margin-left: 0;
+    margin-top: 0px;
+    border: #656565 solid 1px;
+    border-radius: 2px;
+    height: 30px;
+    width: 150px;
+
+}
+
+#submit-btn {
+    background: #272618;
+    color: white;
+    border: transparent solid 1px;
+    border-radius: 2px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+#vidPanel {
+    min-height: 35px;
+}
+div#newPanel {
+    border: transparent solid 1px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+
+}
